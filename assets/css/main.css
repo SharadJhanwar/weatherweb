@@ -194,6 +194,14 @@ header a{
     padding: 1.5rem;
 }
 
+.content h2{
+  font-size: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: linear-gradient(to right,#d5d5f1,#e6e69a,#12ffff);
+  background-clip: text;
+  color: transparent;
+}
+
 
 @media (max-width: 1024px) {
   header {
@@ -264,3 +272,5 @@ header a{
     font-size: 0.75rem;
   }
 }
+
+ 
