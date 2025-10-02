@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Weatheroo - Know the Weather</title>
+    <link rel="stylesheet" href="assets\css\main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <img src="assets/images/sun.webp" alt="sun" />
+            <h1>Weatheroo</h1>
+        </div>
+        <div class="header-search">
+            <input type="search" id="search" placeholder="Enter your city..." />
+            <button id="search-button" onclick="getCity()">Search</button>
+        </div>
+        <div class="header-dropdown">
+            <select id="select-city" onchange="selectedCity(this.value)">
+              <option value="delhi india">Delhi</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="new york">New York</option>
+              <option value="moscow">Moscow</option>
+            </select>
+        </div>   
+        <div class="nav">
+            <a href="info.html">ℹ️ Info</a><br>
+            <a href="blogPage.html">📨 Tips</a><br>
+            <a href="contact.html"> 📞 Conatct</a>
+        </div>
+    </header>
+
+    <main class="content">
+        <h2>Weather of <span class="city">your city</span>
+</h2>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Weatheroo. All Rights Reserved.</p>
+        <h4> Check Weather At Any Time ☁️☁️</h4>
+    </footer>
+    <script src="assets\js\script.js">
+        
+    </script>
+</body>
+</html>
