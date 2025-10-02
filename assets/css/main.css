@@ -1,0 +1,266 @@
+body {
+    position: relative;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(-45deg, #fcbd2c, #7d7c7c, #dbf1fe, #6bb9ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s ease infinite alternate-reverse;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgb(49, 49, 255), skyblue);
+    padding: 1rem 2rem;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-title img {
+    height: 50px;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.header-title h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#search {
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+#search:focus,
+#search:hover {
+    background-color: #ffffcc;
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #0073e6,
+    0 0 20px #0073e6,
+    0 0 25px #0073e6,
+    0 0 30px #0073e6;
+    outline: none;
+    
+}
+#search:focus{
+    outline: 4px solid rgb(244, 173, 212);
+    width: 200px;
+    transition: outline 5s ease-in;
+}
+
+#search-button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    background-color: #ffe9c9;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #ffcf9f;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header-dropdown {
+    margin-top: 0.5rem;
+}
+
+#select-city {
+    padding: 0.4rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.content {
+    max-width: 600px;
+    width: 90%;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    flex: 1; 
+}
+
+.content:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+.form-content input, label,textarea{
+    margin: 10px;
+}
+textarea{
+    resize: vertical;
+    height: 80px;
+    width: 300px;
+}
+
+.form-content input{
+    height: 1.3rem;
+    border-radius: 10px;
+    border: none;
+}
+.form-content input:hover,textarea:hover{
+    border: 2px solid salmon ;
+}
+.form-content input:focus,textarea:focus{
+    outline: none;
+    border: 5px solid rgb(135, 134, 134);
+}
+#submit {
+    height: 2.5rem;
+    width: 150px;
+    border: none;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #70b4ff, #4a8fd8);
+    box-shadow: 0 4px 10px rgba(112, 180, 255, 0.3);
+}
+#submit:hover{
+    translate: -1.5px;
+    scale: 1.2;
+    background: linear-gradient(135deg, #dce8f443, #adcef3);
+    transition: all 3s ease-in-out;
+}
+footer {
+    position: sticky;
+    text-align: center;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #98a4fc, #70b4ff, #add8e6);
+    border-radius: 30px 30px 0 0;
+    font-size: 0.9rem;
+    color: #000;
+    width: 100%;
+    bottom: 0;
+}
+
+.aqi-circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+  
+header a{
+    text-decoration: none;
+    color: brown;
+}  
+.blog-post{
+    padding: 1.5rem;
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .header-title h1 {
+    font-size: 1.7rem;
+  }
+  .content {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-title img {
+    height: 40px;
+  }
+  .header-title h1 {
+    font-size: 1.5rem;
+  }
+  #search {
+    width: 80px;
+  }
+  #search:focus {
+    width: 150px;
+  }
+  textarea {
+    width: 90%;
+  }
+  .content {
+    width: 95%;
+    padding: 1rem;
+  }
+  #submit {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem 1rem;
+  }
+  .header-title h1 {
+    font-size: 1.2rem;
+  }
+  .header-search {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  #search, #search:focus {
+    width: 100%;
+  }
+  #search-button {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 70px;
+  }
+  .content {
+    margin: 1rem;
+    padding: 0.8rem;
+  }
+  footer {
+    font-size: 0.75rem;
+  }
+}
